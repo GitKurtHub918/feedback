@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Home Tour Feedback</title>
+  <script>
+    window.onload = function () {
+      const now = new Date();
+      const date = now.toLocaleDateString();
+      const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
+      const message =
+        "Home tour feedback for 7313 S Gardenia Ave, Broken Arrow\n" +
+        "Date: " + date + "\n" +
+        "Time: " + time + "\n" +
+        "Showing agent name: \n\n" +
+        "Feedback:\n";
+
+      const phone = "9182158924";
+      const url = "sms:" + phone + "?body=" + encodeURIComponent(message);
+
+      window.location.href = url;
+    };
+  </script>
+</head>
+<body></body>
+</html>
